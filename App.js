@@ -7,6 +7,8 @@ import { Provider } from 'react-redux'
 import store from './store'
 import FetchUser from './components/FetchUser';
 import Auth from './components/Auth';
+import Yahtzee from './components/Yahtzee';
+import ProtectedRoute from './ProtectedRoute'
 
 class App extends React.Component {
   constructor(props) {
@@ -36,6 +38,7 @@ class App extends React.Component {
     <Route exact path="/" render={ props => <Auth {...props} type="Login" /> } />
               <Route exact path="/login" render={ props => <Auth {...props} type="Login" /> } />
     <Route exact path="/register" render={ props => <Auth {...props} type="Register" /> } />
+            <ProtectedRoute exact path ="/" component={Yahtzee} />
             </Switch>
           </NativeRouter>
         </FetchUser>
