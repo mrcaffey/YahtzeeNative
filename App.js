@@ -9,6 +9,7 @@ import FetchUser from './components/FetchUser';
 import Auth from './components/Auth';
 import Yahtzee from './components/Yahtzee';
 import ProtectedRoute from './ProtectedRoute'
+import Scores from './components/Scores';
 
 class App extends React.Component {
   constructor(props) {
@@ -39,6 +40,7 @@ class App extends React.Component {
               <Route exact path="/login" render={ props => <Auth {...props} type="Login" /> } />
     <Route exact path="/register" render={ props => <Auth {...props} type="Register" /> } />
             <ProtectedRoute exact path ="/" component={Yahtzee} />
+            <ProtectedRoute exact path ="/" component={Scores} />
             </Switch>
           </NativeRouter>
         </FetchUser>
