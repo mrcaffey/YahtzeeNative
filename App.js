@@ -1,6 +1,8 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { AppLoading } from 'expo'
+import { Provider } from 'react-redux'
+import store from './store'
 
 export default class App extends React.Component {
   state = { isReady: false }
@@ -19,11 +21,12 @@ export default class App extends React.Component {
       />
     )
     return (
+      <Provider storre = {store}>
       <View style={styles.container}>
         <Text>Open up App.js to start working on your app!</Text>
         <Text>Changes you make will automagically reload</Text>
-
       </View>
+      </Provider>
     );
   }
 }

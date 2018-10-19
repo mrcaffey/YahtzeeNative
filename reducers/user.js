@@ -1,4 +1,5 @@
 import axios from 'axios'
+import { BASE_URL } from '../utils/urls'
 
 const LOGIN = 'LOGIN'
 const LOGOUT = 'LOGOUT'
